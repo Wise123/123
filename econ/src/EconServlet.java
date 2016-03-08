@@ -58,7 +58,7 @@ public class EconServlet extends GenericServlet implements Servlet {
 	 * @see Servlet#service(ServletRequest request, ServletResponse response)
 	 */
 	public void service(ServletRequest request, ServletResponse response) throws ServletException, IOException {
-		response.getWriter().write("<h1>Hello World</h1>");
-	}
+		request.getServletContext().getRequestDispatcher("/pages/index.jsp").forward(request, response);
+    };
 
 }
